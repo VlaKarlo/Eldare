@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "288093970670",
+    "project_id": "eldare-a4fc1",
+    "storage_bucket": "eldare-a4fc1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:288093970670:android:6e9d55d15782aad41913ff",
+        "android_client_info": {
+          "package_name": "hr.ferit.karlovlasic.eldare"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjs5_4Ta7Bq3ZZwZTt0poHEiXp8YF1pUs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
