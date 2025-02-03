@@ -107,6 +107,7 @@ class MedicineManager(
         }
 
         val newIntakeTimeKey = "${newMedicineHours}:${newMedicineMinutes}"
+
         var updateData =
             if(medicineNames.contains(medicineName)){
                 var mapIndex = medicineNames.indexOf(medicineName)
@@ -121,6 +122,7 @@ class MedicineManager(
                     "intakeTimes" to FieldValue.arrayUnion(mapOf(newIntakeTimeKey to medicineAmount)),
                 )
             }
+
         db.update(updateData)
             .addOnSuccessListener {
                 viewModel.fetchDatabaseData()

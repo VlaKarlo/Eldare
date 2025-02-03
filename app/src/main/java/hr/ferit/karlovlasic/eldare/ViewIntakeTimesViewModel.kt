@@ -13,13 +13,19 @@ class ViewIntakeTimesViewModel: ViewModel() {
     }
     fun fetchDatabaseData() {
         db.collection("medicalSchedule")
-            .get()
-            .addOnSuccessListener { result ->
-                for (data in result.documents) {
-                    val medicine = data.toObject(Medicine::class.java)
-                    if (medicine != null) {
-                        medicine.doc = data.id
-                        medicineData.add(medicine)
+            .addSnapshotListener { snapshot, e ->
+                if (e != null) {
+                    return@addSnapshotListener
+                }
+
+                if (snapshot != null) {
+                    medicineData.clear()
+                    for (doc in snapshot.documents) {
+                        val medicine = doc.toObject(Medicine::class.java)
+                        if (medicine != null) {
+                            medicine.doc = doc.id
+                            medicineData.add(medicine)
+                        }
                     }
                 }
             }
