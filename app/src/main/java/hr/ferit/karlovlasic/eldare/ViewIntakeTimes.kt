@@ -30,7 +30,6 @@ fun ViewIntakeTimesScreen(
     val medicineAmount  = 2
     val medicineIntakeTime  = 1
 
-
     val sortedMedicineSchedule = MedicineScheduleManager().getSortedSchedule(viewModel, applicationContext)
 
     Column(

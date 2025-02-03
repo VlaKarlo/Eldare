@@ -222,7 +222,6 @@ fun ReminderCard(
             .padding(10.dp)
             .background(Purple)
             .fillMaxWidth()
-
     ) {
         Row {
             Text(

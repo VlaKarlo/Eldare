@@ -7,6 +7,8 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.TimePickerState
 import androidx.compose.runtime.Composable
@@ -38,6 +40,7 @@ fun AddMedicineScreen(
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
             .fillMaxSize()
+            .verticalScroll(rememberScrollState())
     )  {
         BackBar(
             text = "Dodaj Lijek",
@@ -86,7 +89,7 @@ fun AddMedicineScreen(
                         onCompletion = {
                             Toast.makeText(
                                 context,
-                                "Lijek uspješno dodan!",
+                                "Lijek je uspješno dodan!",
                                 Toast.LENGTH_SHORT).show()
                             medicineName = ""
                             medicineAmount = ""
